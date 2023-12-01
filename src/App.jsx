@@ -1,4 +1,5 @@
 import { Container, GlobalStyle } from "./GlobalStyles";
+import DataForm from "./components/DataForm/DataForm";
 import Header from "./components/Header/Header";
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <Container>
       <GlobalStyle />
       <Header />
+      <DataForm />
     </Container>
   );
 }
