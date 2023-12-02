@@ -20,6 +20,7 @@ export const StyledTableHeaderCell = styled.th`
   padding: 10px;
   text-align: center;
   font-weight: bold;
+  font-family: "Montserrat", sans-serif;
 `;
 
 export const StyledTableBody = styled.tbody``;

@@ -1,4 +1,5 @@
 import Charts from "../Chart/Charts";
+import PropTypes from "prop-types";
 import {
   StyledTable,
   StyledTableBody,
@@ -8,12 +9,9 @@ import {
   StyledTableHeaderCell,
   StyledTableRow,
 } from "./DataTable.styled";
-import { data } from "./data.json";
+import { data } from "../../data/data.json";
 
-const DataTable = () => {
-  const a = 0.01112;
-  const b = 0.00259;
-  const population = 100000;
+const DataTable = ({ a, b, population }) => {
   /* ---------------------------------- S(x) ---------------------------------- */
   const calculateS = (x, alpha, beta) =>
     Math.exp((-beta * (Math.exp(alpha * x) - 1)) / alpha);
@@ -73,3 +71,9 @@ const DataTable = () => {
 };
 
 export default DataTable;
+
+DataTable.propTypes = {
+  a: PropTypes.string.isRequired,
+  b: PropTypes.string.isRequired,
+  population: PropTypes.string.isRequired,
+};

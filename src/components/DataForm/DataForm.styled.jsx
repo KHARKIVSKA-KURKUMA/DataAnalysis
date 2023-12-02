@@ -7,3 +7,12 @@ export const StyledBox = styled(Box)`
   gap: 25px;
   margin-top: 25px;
 `;
+export const Notification = styled.div`
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  p {
+    font-size: 56px;
+  }
+`;

@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import Chart from "chart.js/auto";
 import { Title } from "./Chart.styled";
+import PropTypes from "prop-types";
 import { Bar } from "react-chartjs-2";
 
 const Charts = ({ a, b, population, data }) => {
@@ -81,3 +82,10 @@ const Charts = ({ a, b, population, data }) => {
 };
 
 export default Charts;
+
+Charts.propTypes = {
+  a: PropTypes.string.isRequired,
+  b: PropTypes.string.isRequired,
+  population: PropTypes.string.isRequired,
+  data: PropTypes.array.isRequired,
+};
