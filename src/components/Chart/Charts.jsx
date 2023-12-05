@@ -84,8 +84,8 @@ const Charts = ({ a, b, population, data }) => {
 export default Charts;
 
 Charts.propTypes = {
-  a: PropTypes.string.isRequired,
-  b: PropTypes.string.isRequired,
-  population: PropTypes.string.isRequired,
+  a: PropTypes.number.isRequired,
+  b: PropTypes.number.isRequired,
+  population: PropTypes.number.isRequired,
   data: PropTypes.array.isRequired,
 };

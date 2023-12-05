@@ -8,6 +8,7 @@ import Notific from "../../img/notification.png";
 const DataForm = () => {
   const [alpha, setAlpha] = useState(0);
   const [beta, setBeta] = useState(0);
+  const [i, setI] = useState(0);
   const [population, setPopulation] = useState(0);
 
   const handleSubmit = (e) => {
@@ -46,12 +47,24 @@ const DataForm = () => {
           value={population}
           onChange={(e) => setPopulation(e.target.value)}
         />
+        <TextField
+          id="outlined-basic"
+          label="i"
+          variant="outlined"
+          value={i}
+          onChange={(e) => setI(e.target.value)}
+        />
         <Button variant="contained" type="submit">
           Reset
         </Button>
       </StyledBox>
-      {alpha !== 0 && beta !== 0 && population !== 0 ? (
-        <DataTable a={alpha} b={beta} population={population} />
+      {alpha !== 0 && beta !== 0 && population !== 0 && i !== 0 ? (
+        <DataTable
+          a={parseFloat(alpha)}
+          b={parseFloat(beta)}
+          population={parseInt(population)}
+          i={parseFloat(i)}
+        />
       ) : (
         <Notification>
           <p>Please enter a value!</p>

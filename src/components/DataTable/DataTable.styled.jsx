@@ -5,6 +5,15 @@ export const StyledTable = styled.div`
   margin-top: 30px;
 `;
 
+export const Average = styled.h2`
+  text-align: right;
+  margin-top: 5px;
+  margin-right: 15px;
+  span {
+    color: #1976d2;
+  }
+`;
+
 export const StyledTableContainer = styled.table`
   width: 70%;
   border-collapse: collapse;
