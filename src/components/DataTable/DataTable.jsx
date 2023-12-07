@@ -70,7 +70,8 @@ const DataTable = ({ a, b, population, i }) => {
     return sum;
   };
   /* ---------------------------------- Fault --------------------------------- */
-  const calculateFault = (l, vozL) => Math.abs(((vozL - l) / vozL) * 100);
+  const calculateFault = (l, vozL, population) =>
+    Math.abs(((l - vozL) / population) * 100);
   /* ---------------------------------- Table --------------------------------- */
   const rows = [];
   const faults = [];
@@ -86,7 +87,7 @@ const DataTable = ({ a, b, population, i }) => {
     const cn = calculateCN(x, yearAmount, population, a, b, i);
     const cm = calculateCM(x, yearAmount, population, a, b, i);
     const vozL = data[x - 1];
-    const fault = calculateFault(l, vozL);
+    const fault = calculateFault(l, vozL, population);
     faults.push(fault);
     const sum = faults.reduce(
       (accumulator, currentValue) => accumulator + currentValue,
